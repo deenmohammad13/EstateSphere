@@ -4,7 +4,6 @@ import { PropertyCardComponent } from '../Property-card/property-card.component'
 
 @Component({
   selector: 'app-property-list',
-  standalone: true,  // Declare this as a standalone component
   imports: [CommonModule, PropertyCardComponent],  // Import CommonModule and PropertyCardComponent
   templateUrl: './property-list.component.html',
   styleUrls: ['./property-list.component.css']
@@ -16,6 +15,12 @@ export class PropertyListComponent {
     { "Id": 3, "Name": "Home Heaven", "Type": "House", "Price": 18000 },
     { "Id": 4, "Name": "Eco Cottage", "Type": "House", "Price": 12000 },
     { "Id": 5, "Name": "The Lodge", "Type": "House", "Price": 15000 },
-    { "Id": 6, "Name": "Little Valley", "Type": "House", "Price": 20000 }
+    { "Id": 6, "Name": "Little Valley", "Type": "House", "Price": 20000 },
+    { "Id": 7, "Name": "Gun Hill", "Type": "House", "Price": 12000 },
+    { "Id": 8, "Name": "Macro Home", "Type": "House", "Price": 15000 },
+    { "Id": 9, "Name": "Pearl House", "Type": "House", "Price": 18000 },
+    { "Id": 10, "Name": "Eco Cottage", "Type": "House", "Price": 12000 },
+    { "Id": 11, "Name": "The Lodge", "Type": "House", "Price": 15000 },
+    { "Id": 12, "Name": "Little Valley", "Type": "House", "Price": 20000 }
   ];
 }
