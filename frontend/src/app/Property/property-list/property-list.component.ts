@@ -1,26 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PropertyCardComponent } from '../Property-card/property-card.component'; // Import PropertyCardComponent
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-property-list',
+  standalone:true,
   imports: [CommonModule, PropertyCardComponent],  // Import CommonModule and PropertyCardComponent
   templateUrl: './property-list.component.html',
   styleUrls: ['./property-list.component.css']
 })
-export class PropertyListComponent {
-  properties: Array<any> = [
-    { "Id": 1, "Name": "Birla House", "Type": "House", "Price": 12000 },
-    { "Id": 2, "Name": "Erose Villa", "Type": "House", "Price": 15000 },
-    { "Id": 3, "Name": "Home Heaven", "Type": "House", "Price": 18000 },
-    { "Id": 4, "Name": "Eco Cottage", "Type": "House", "Price": 12000 },
-    { "Id": 5, "Name": "The Lodge", "Type": "House", "Price": 15000 },
-    { "Id": 6, "Name": "Little Valley", "Type": "House", "Price": 20000 },
-    { "Id": 7, "Name": "Gun Hill", "Type": "House", "Price": 12000 },
-    { "Id": 8, "Name": "Macro Home", "Type": "House", "Price": 15000 },
-    { "Id": 9, "Name": "Pearl House", "Type": "House", "Price": 18000 },
-    { "Id": 10, "Name": "Eco Cottage", "Type": "House", "Price": 12000 },
-    { "Id": 11, "Name": "The Lodge", "Type": "House", "Price": 15000 },
-    { "Id": 12, "Name": "Little Valley", "Type": "House", "Price": 20000 }
-  ];
+
+export class PropertyListComponent implements OnInit {
+  properties: any;
+
+  constructor(private http :HttpClient){
+
+  }
+
+  ngOnInit(): void {
+    this.http.get('assets/data/properties.json').subscribe(
+      data => {console.log(data);
+      this.properties = data;
+      }
+    );
+  }
 }
