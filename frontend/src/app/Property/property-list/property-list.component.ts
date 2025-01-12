@@ -1,7 +1,10 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PropertyCardComponent } from '../Property-card/property-card.component'; // Import PropertyCardComponent
-import { HttpClient } from '@angular/common/http';
+import { HousingService } from '../../services/housing.service';
+import { error } from 'console';
+import { cwd } from 'process';
+
 
 @Component({
   selector: 'app-property-list',
@@ -14,15 +17,26 @@ import { HttpClient } from '@angular/common/http';
 export class PropertyListComponent implements OnInit {
   properties: any;
 
-  constructor(private http :HttpClient){
+  constructor(private housingService: HousingService){
 
   }
 
   ngOnInit(): void {
-    this.http.get('assets/data/properties.json').subscribe(
-      data => {console.log(data);
-      this.properties = data;
-      }
-    );
+    this.housingService.getAllProperties().subscribe({
+        next: (data) => {
+            console.log(data);
+            this.properties = data;
+        },
+        error: (error) => {
+            console.log('httperror');
+            console.log(error);
+        },
+        complete: () => {
+            console.log('Request complete');
+        }
+    }
+  );
+
   }
 }
+
