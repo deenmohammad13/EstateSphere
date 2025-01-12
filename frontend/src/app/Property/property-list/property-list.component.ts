@@ -15,7 +15,7 @@ import { cwd } from 'process';
 })
 
 export class PropertyListComponent implements OnInit {
-  properties: any;
+  properties: Array<any>=[];
 
   constructor(private housingService: HousingService){
 
