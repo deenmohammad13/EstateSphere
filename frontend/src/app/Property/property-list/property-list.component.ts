@@ -4,6 +4,7 @@ import { PropertyCardComponent } from '../Property-card/property-card.component'
 import { HousingService } from '../../services/housing.service';
 import { error } from 'console';
 import { cwd } from 'process';
+import { Iproperty } from '../iproperty.interfaces';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { cwd } from 'process';
 })
 
 export class PropertyListComponent implements OnInit {
-  properties: Array<any>=[];
+  properties: Array<Iproperty>=[];
 
   constructor(private housingService: HousingService){
 
