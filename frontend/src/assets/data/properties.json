@@ -1,14 +1,14 @@
 [
-  { "Id": 1, "Name": "Birla House", "Type": "House", "Price": 12000 },
-  { "Id": 2, "Name": "Erose Villa", "Type": "House", "Price": 15000 },
-  { "Id": 3, "Name": "Home Heaven", "Type": "House", "Price": 18000 },
-  { "Id": 4, "Name": "Eco Cottage", "Type": "House", "Price": 12000 },
-  { "Id": 5, "Name": "The Lodge", "Type": "House", "Price": 15000 },
-  { "Id": 6, "Name": "Little Valley", "Type": "House", "Price": 20000 },
-  { "Id": 7, "Name": "Gun Hill", "Type": "House", "Price": 12000 },
-  { "Id": 8, "Name": "Macro Home", "Type": "House", "Price": 15000 },
-  { "Id": 9, "Name": "Pearl House", "Type": "House", "Price": 18000 },
-  { "Id": 10, "Name": "Eco Cottage", "Type": "House", "Price": 12000 },
-  { "Id": 11, "Name": "The Lodge", "Type": "House", "Price": 15000 },
-  { "Id": 12, "Name": "Little Valley", "Type": "House", "Price": 20000 }
+  { "Id": 1, "SellRent" :1, "Name": "Birla House", "Type": "House", "Price": 12000, "Image": "prop-1" },
+  { "Id": 2, "SellRent" :2, "Name": "Erose Villa", "Type": "House", "Price": 15000, "Image": "prop-2" },
+  { "Id": 3, "SellRent" :1, "Name": "Home Heaven", "Type": "House", "Price": 18000, "Image": "prop-3" },
+  { "Id": 4, "SellRent" :1, "Name": "Eco Cottage", "Type": "House", "Price": 12000, "Image": "prop-4" },
+  { "Id": 5, "SellRent" :1, "Name": "The Lodge", "Type": "House", "Price": 15000},
+  { "Id": 6, "SellRent" :2, "Name": "Little Valley", "Type": "House", "Price": 20000, "Image": "prop-6" },
+  { "Id": 7, "SellRent" :1, "Name": "Gun Hill", "Type": "House", "Price": 12000, "Image": "prop-7" },
+  { "Id": 8, "SellRent" :1, "Name": "Macro Home", "Type": "House", "Price": 15000, "Image": "prop-8" },
+  { "Id": 9, "SellRent" :2, "Name": "Pearl House", "Type": "House", "Price": 18000, "Image": "prop-9" },
+  { "Id": 10, "SellRent" :1, "Name": "Eco Cottage", "Type": "House", "Price": 12000, "Image": "prop-10" },
+  { "Id": 11, "SellRent" :1, "Name": "The Lodge", "Type": "House", "Price": 15000, "Image": "prop-11"},
+  { "Id": 12, "SellRent" :2, "Name": "Little Valley", "Type": "House", "Price": 20000, "Image": "prop-12" }
 ]
