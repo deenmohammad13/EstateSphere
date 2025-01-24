@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule,NgForm } from '@angular/forms';
+import { FormsModule,NgForm,NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  imports : [FormsModule],
-  standalone: true,
+  imports : [FormsModule,NgModel],
   selector: 'app-add-property',
   templateUrl: './add-property.component.html',
   styleUrls: ['./add-property.component.css']
